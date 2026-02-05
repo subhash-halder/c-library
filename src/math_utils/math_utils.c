@@ -39,7 +39,8 @@ int gcd(int a, int b) {
 
 int lcm(int a, int b) {
     if (a == 0 || b == 0) return 0;
-    return abs(a * b) / gcd(a, b);
+    // Compute as abs(a / gcd(a, b) * b) to reduce overflow risk
+    return abs(a / gcd(a, b) * b);
 }
 
 double power(double base, int exponent) {

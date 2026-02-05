@@ -28,8 +28,9 @@ void str_to_lower(char *str);
 
 /**
  * Trim leading and trailing whitespace from a string
+ * Note: This function modifies the string in place by writing a null terminator
  * @param str The string to trim
- * @return Pointer to the trimmed string
+ * @return Pointer to the trimmed string (same buffer, potentially different start)
  */
 char* str_trim(char *str);
 
